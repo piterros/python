@@ -12,6 +12,5 @@ for translation in translations:
   print(translation.origin)
   print("EN: #######################")
   print(translation.text)
-  print("PL: #######################")
+  print("ES: #######################")
   print(translated_pl_es)
-#
