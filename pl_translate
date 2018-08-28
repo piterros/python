@@ -1,0 +1,16 @@
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+from googletrans import Translator
+
+polish = raw_input('Text in Polish: ')
+translated_pl_es = Translator().translate(polish, src='pl', dest='es')
+
+translations = Translator(service_urls=['translate.google.pl']).translate([polish])
+for translation in translations:
+  print("PL: #######################")
+  print(translation.origin)
+  print("EN: #######################")
+  print(translation.text)
+  print("PL: #######################")
+  print(translated_pl_es)

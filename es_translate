@@ -1,0 +1,17 @@
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+from googletrans import Translator
+
+espanol = raw_input('Text in Spanish: ')
+translated_es_pl = Translator().translate(espanol, src='es', dest='pl')
+
+translations = Translator(service_urls=['translate.google.pl']).translate([espanol])
+for translation in translations:
+  print("ES: #######################")
+  print(translation.origin)
+  print("EN: #######################")
+  print(translation.text)
+  print("PL: #######################")
+  print(translated_es_pl)
+
